@@ -9,7 +9,7 @@
 
 <div align="center">
     <img src="https://img.shields.io/badge/v-0.0.1-black"/>
-    <a href="https://img.shields.io/github/stars/minejs-org"><img src="https://img.shields.io/badge/🔥-@minejs-black"/></a>
+    <a href="https://github.com/minejs-org"><img src="https://img.shields.io/badge/🔥-@minejs-black"/></a>
     <br>
     <img src="https://img.shields.io/badge/coverage-0%25-brightgreen" alt="Test Coverage" />
     <img src="https://img.shields.io/github/issues/repo-example/server?style=flat" alt="Github Repo Issues" />
