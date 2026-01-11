@@ -112,24 +112,20 @@
             - ##### `src`
 
                 ```bash
-                ┣ server     # The core
-                ┃ ┗ ...
+                ┣ server         # The core
+                ┃ ┣ routes.ts   # Server routes file
+                ┃ ┗ config.ts   # Server configuration file
                 ┃
-                ┣ public     # The public zone
-                ┃ ┗ ...
+                ┣ public         # The public zone
+                ┃ ┗ index.html
                 ┃
-                ┗ index.ts   # The main entry point
+                ┣ i18n/          # Internationalization
+                ┃ ┣ en.json
+                ┃ ┗ ar.json
+                ┃
+                ┗ index.ts       # The main entry point
                 ```
 
-                - ##### `server`
-
-                ```bash
-                ┣ config.ts            # Server configuration file
-                ┃
-                ┣ routes.ts            # Server routes file
-                ┃
-                ┗ index.ts             # Server entry point
-                ```
 
     <div align="center"> <img src="./assets/img/line.png" alt="line" style="display: block; margin-top:20px;margin-bottom:20px;width:500px;"/> </div>
     <br>
@@ -156,11 +152,13 @@
 
     - ### Related 🔗
 
-        - ##### [..](#)
-            > ..
+        - ##### [@minejs/hmm](https://github.com/minejs-org/hmm)
 
-        - ##### [..](#)
-            > ..
+        - ##### [@minejs/server](https://github.com/minejs-org/server)
+
+        - ##### [@minejs/i18n](https://github.com/minejs-org/i18n)
+
+        - ##### [@minejs/db](https://github.com/minejs-org/db)
 
 <!-- ╚═════════════════════════════════════════════════════════════════╝ -->
 

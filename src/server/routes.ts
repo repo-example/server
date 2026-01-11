@@ -6,7 +6,7 @@
 
 // ╔════════════════════════════════════════ PACK ════════════════════════════════════════╗
 
-    import { RouteDefinition, type AppContext } from '@minejs/server';
+    import { RouteDefinition, type AppContext, t } from '@minejs/server';
 
 // ╚══════════════════════════════════════════════════════════════════════════════════════╝
 
@@ -31,8 +31,21 @@
         {
             method  : 'GET',
             path    : '/hello_world',
+
             handler: (c: AppContext) => {
-                return c.json({ message: 'Hello World!' });
+                // Language is auto-detected from:
+                // 1. ?lang=ar query parameter
+                // 2. lang=ar cookie
+                // 3. Accept-Language header
+                // 4. Default language
+
+                const currentLang = c.lang;
+
+                return c.json({
+                    message    : t('hello'),
+                    language   : currentLang,
+                    supported  : c.i18n?.getSupportedLanguages()
+                });
             }
         },
 

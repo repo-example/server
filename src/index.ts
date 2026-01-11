@@ -6,7 +6,9 @@
 
 // ╔════════════════════════════════════════ PACK ════════════════════════════════════════╗
 
-    import * as Backend from './server';
+    import { server as createServer }   from '@minejs/server';
+    import { config }                   from './server/config';
+    import { routes }                   from './server/routes';
 
 // ╚══════════════════════════════════════════════════════════════════════════════════════╝
 
@@ -14,6 +16,14 @@
 
 // ╔════════════════════════════════════════ CORE ════════════════════════════════════════╗
 
-    Backend.server.start();
+    async function main() {
+        const server = await createServer({ ...config, routes });
+
+        await server.start();
+
+        return server;
+    }
+
+    main();
 
 // ╚══════════════════════════════════════════════════════════════════════════════════════╝

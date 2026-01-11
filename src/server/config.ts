@@ -59,6 +59,12 @@
             pretty      : true
         },
 
+        i18n           : {
+            defaultLanguage     : 'ar',
+            supportedLanguages  : ['ar', 'en'],
+            basePath            : './src/i18n'
+        },
+
         // database        : {
         //     connection  : dbName,
         //     schema      : { }
